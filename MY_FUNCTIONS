@@ -1,0 +1,85 @@
+int my_strlen (char *s1)
+{
+	int len;
+
+	len = 0;
+	while (s1[len++] != '\0');
+	return (len - 1);
+}
+
+char *my_concat(char *s1, char *s2)
+{
+	char *temp;
+	int i;
+	int len1;
+	int len2;
+
+	len1 = my_strlen(s1);
+	len2 = my_strlen(s2);
+	
+	temp = (char*)malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if(temp == NULL)
+		return (0);
+
+	i = 0;
+	temp[len1 + len2] = '\0';
+	while (i < len1 + len2)
+	{
+		if (i < len1)
+			temp[i] = s1[i];
+		else
+			temp[i] = s2[i - len1];
+		i++;
+	}
+	return (temp);
+}
+// int my_strlen (char *s1)
+// {
+// 	int len;
+
+// 	len = 0;
+// 	while (s1[len++]);
+// 	return (len - 1);
+// }
+
+// char *my_concat(char *s1, char *s2)
+// {
+// 	char *temp;
+// 	int i;
+// 	int len1;
+// 	int len2;
+
+// 	len1 = my_strlen(s1);
+// 	len2 = my_strlen(s2);
+// 	temp = (char*)malloc(sizeof(char) * (len1 + len2 + 2));
+// 	if(temp == NULL)
+// 		return (0);
+// 	i = 0;
+// 	temp[len1 + len2] = '\0';
+// 	temp[len1] = '\n';
+// 	while (i < len1 + len2)
+// 	{
+// 		if (i < len1)
+// 			temp[i] = s1[i];
+// 		else
+// 			temp[i+1] = s2[i - len1];
+// 		i++;
+// 	}
+// 	return (temp);
+// }
+
+// char *ft_concat_params(int argc, char **argv)
+// {
+// 	char *temp;
+// 	int i;
+
+// 	if(argc == 1)
+// 		return (NULL);
+// 	temp = argv[1];
+// 	i = 2;
+// 	while (i < argc)
+// 		temp = my_concat(temp, argv[i++]);
+// 	return (temp);
+
+// }

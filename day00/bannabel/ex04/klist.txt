@@ -1,0 +1,7 @@
+Credentials cache: API:9402
+        Principal: bannabel@21-SCHOOL.RU
+
+  Issued                Expires               Principal
+Feb 25 15:51:51 2019  Feb 26 01:51:51 2019  krbtgt/21-SCHOOL.RU@21-SCHOOL.RU
+Feb 25 15:51:52 2019  Feb 26 01:51:51 2019  ldap/ldap-master.21-school.ru@21-SCHOOL.RU
+Feb 25 15:51:52 2019  Feb 26 01:51:51 2019  HTTP/storage-student.21-school.ru@21-SCHOOL.RU
